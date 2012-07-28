@@ -106,9 +106,9 @@ void Application::createScene()
 	 
 	manual->begin("BaseWhiteNoLighting", RenderOperation::OT_TRIANGLE_LIST);
 
-	manual->position(-0.45, -0.45, 0.0);
-	manual->position( 0.45, -0.45, 0.0);
-	manual->position( 0,  0.45, 0.0);
+    manual->position(-0.5, -0.5, 0.0);
+    manual->position( 0.5, -0.5, 0.0);
+    manual->position( 0,  0.5, 0.0);
 		 
 	manual->end();
 	 
@@ -165,10 +165,10 @@ void Application::onRenderWindowRecreated()
 
 		TexturePtr depthTexture;
 
-		//depthTexture = compositor->getTextureInstance("edgeTex",0);
+        depthTexture = compositor->getTextureInstance("edgeTex",0);
 
 
-        depthTexture = compositor->getTextureInstance("blendTex",0);
+        //depthTexture = compositor->getTextureInstance("blendTex",0);
 
 		//depthTexture = compositor->getTextureInstance("neighborhoodTex",0);
 
